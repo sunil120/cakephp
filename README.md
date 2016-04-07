@@ -9,7 +9,7 @@ The framework source code can be found here: [cakephp/cakephp](https://github.co
 
 ## Installation
 
-1. Go to your /var/www/html using cd /var/www/html and make a clone using below command
+## Go to your /var/www/html using cd /var/www/html and make a clone using below command
    git clone https://github.com/sunil120/cakephp3.git
 
 
@@ -20,17 +20,15 @@ Add database detail in  `config/app.php` file
 ## Go to /var/www/html/cakephp3/webroot/db and import cakephp.sql file in your database
 
 ## You might have to enable intl extention to run cakephp3.2. 
-sudo apt-get install php5-intl
-sudo service apache2 restart
-OR 
-sudo service apache2 reload
+<p>sudo apt-get install php5-intl</p>
+<p>sudo service apache2 restart</p>
+<p>OR </p>
+<p>sudo service apache2 reload</p>
 
 ## Login Page
-http://localhost/cakephp3/users/login
-Username : skumar
-Password : Admin@1235
-
-
+<p>http://localhost/cakephp3/users/login</p>
+<p>Username : skumar</p>
+<p>Password : Admin@1235</p>
 
 ## You might have to need below link if you face issue with PDF generation on image.
 https://webtoolsplus.com/cakephp-wkhtmltopdf-didnt-return-any-data/
