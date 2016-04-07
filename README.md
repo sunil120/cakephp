@@ -1,4 +1,4 @@
-# CakePHP Application Skeleton
+# CakePHP3.2 Application With login , crud , google custom imgae search , pdf , zip and export featues
 
 [![Build Status](https://img.shields.io/travis/cakephp/app/master.svg?style=flat-square)](https://travis-ci.org/cakephp/app)
 [![License](https://img.shields.io/packagist/l/cakephp/app.svg?style=flat-square)](https://packagist.org/packages/cakephp/app)
@@ -9,18 +9,28 @@ The framework source code can be found here: [cakephp/cakephp](https://github.co
 
 ## Installation
 
-1. Download [Composer](http://getcomposer.org/doc/00-intro.md) or update `composer self-update`.
-2. Run `php composer.phar create-project --prefer-dist cakephp/app [app_name]`.
+1. Go to your /var/www/html using cd /var/www/html and make a clone using below command
+   git clone https://github.com/sunil120/cakephp3.git
 
-If Composer is installed globally, run
-```bash
-composer create-project --prefer-dist cakephp/app [app_name]
-```
-
-You should now be able to visit the path to where you installed the app and see
-the setup traffic lights.
 
 ## Configuration
 
-Read and edit `config/app.php` and setup the 'Datasources' and any other
-configuration relevant for your application.
+Add database detail in  `config/app.php` file
+
+## Go to /var/www/html/cakephp3/webroot/db and import cakephp.sql file in your database
+
+## You might have to enable intl extention to run cakephp3.2. 
+sudo apt-get install php5-intl
+sudo service apache2 restart
+OR 
+sudo service apache2 reload
+
+## You might have to need below link if you face issue with PDF generation on image.
+https://webtoolsplus.com/cakephp-wkhtmltopdf-didnt-return-any-data/
+
+
+
+
+
+
+
