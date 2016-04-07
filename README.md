@@ -25,6 +25,13 @@ sudo service apache2 restart
 OR 
 sudo service apache2 reload
 
+## Login Page
+http://localhost/cakephp3/users/login
+Username : skumar
+Password : Admin@1235
+
+
+
 ## You might have to need below link if you face issue with PDF generation on image.
 https://webtoolsplus.com/cakephp-wkhtmltopdf-didnt-return-any-data/
 
