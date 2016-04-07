@@ -49,7 +49,7 @@ class ImagesTable extends Table
 
         $validator
             ->requirePresence('url', 'create')
-            ->notEmpty('url');
+            ->notEmpty('link');
 
         return $validator;
     }

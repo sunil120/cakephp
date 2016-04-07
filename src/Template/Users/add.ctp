@@ -2,6 +2,7 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('Image'), ['controller'=>'images','action' => 'index']) ?></li>
     </ul>
 </nav>
 <div class="users form large-9 medium-8 columns content">
