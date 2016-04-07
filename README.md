@@ -10,7 +10,7 @@ The framework source code can be found here: [cakephp/cakephp](https://github.co
 ## Installation
 
 1. Go to your /var/www/html using cd /var/www/html and make a clone using below command
-   git clone https://github.com/sunil120/cakephp3.2.git
+   git clone https://github.com/sunil120/cakephp3.git
 
 
 ## Configuration
