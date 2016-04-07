@@ -21,7 +21,9 @@ Add database detail in  `config/app.php` file
 
 ## You might have to enable intl extention to run cakephp3.2. 
 sudo apt-get install php5-intl
-sudo service apache2 restart OR sudo service apache2 reload
+sudo service apache2 restart
+OR 
+sudo service apache2 reload
 
 ## You might have to need below link if you face issue with PDF generation on image.
 https://webtoolsplus.com/cakephp-wkhtmltopdf-didnt-return-any-data/
