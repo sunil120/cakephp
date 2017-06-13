@@ -18,12 +18,47 @@ class EmailsController extends AppController
         parent::initialize();
         $this->loadComponent('General');
     }
+    
     public function index()
     {
-        $this->viewBuilder()->layout(false);
-        $this->autoRender = false;
-        echo 1;
+        //$this->viewBuilder()->layout(false);
+        //$this->autoRender = false;
+        //echo 1;
+		$imapPath = '{sg2plcpnl0245.prod.sin2.secureserver.net:993/imap/ssl/novalidate-cert}INBOX';
+		$username = 'sunil.kumar@zeksta.com';
+		$password = 'Sunil@zeksta';
+
+		// try to connect
+		$inbox = imap_open($imapPath,$username,$password) or die('Cannot connect to Gmail: ' . imap_last_error());
+		
+		// search and get unseen emails, function will return email ids
+		$emails = imap_search($inbox,'UNSEEN');
+		$output = '';
+		foreach($emails as $mail) {
+
+			$headerInfo = imap_headerinfo($inbox,$mail);
+			$output .= $headerInfo->subject.'<br/>';
+			$output .= $headerInfo->toaddress.'<br/>';
+			$output .= $headerInfo->date.'<br/>';
+			$output .= $headerInfo->fromaddress.'<br/>';
+			$output .= $headerInfo->reply_toaddress.'<br/>';
+			$emailStructure = imap_fetchstructure($inbox,$mail);
+			//var_dump($emailStructure->parts);
+			if(isset($emailStructure->parts)) {
+				 $output .= imap_body($inbox, $mail, FT_PEEK);
+			} else {
+				//    
+			}
+		   echo $output;
+		   die;
+		   $output = '';
+		}
+		// colse the connection
+		imap_expunge($inbox);
+		imap_close($inbox);
+		print_r($inbox); die;
     }
+    
      /**
      * @author: ARS, Gurgaon
      * @method: __concatEmailAddress()
